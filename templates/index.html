@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ myapp }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="container mt-4">
+    <h1 class="mb-3">{{ myapp }}</h1>
+    <p><strong>Автор проекта:</strong> {{ author_name }}</p>
+    <p><strong>Группа:</strong> {{ group }}</p>
+
+    <nav class="nav mb-4">
+      {% for item in navigation %}
+        <a class="nav-link" href="{{ item.href }}">{{ item.caption }}</a>
+      {% endfor %}
+    </nav>
+  </body>
+</html>
